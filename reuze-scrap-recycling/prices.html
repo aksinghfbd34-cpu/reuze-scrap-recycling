@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Live Scrap Rates & Price List - Reuze.in</title>
+  <meta name="description" content="Check latest daily scrap rates for Copper, Brass, Aluminium, Iron, Old ACs, Laptops, Batteries, and Vehicles across Delhi NCR, Mumbai, Bengaluru, and Pune.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-left">
+        <div class="topbar-item">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Live Rate Ticker: Copper ₹740/kg (+₹15) | Brass ₹495/kg | Aluminium ₹185/kg | Split AC ₹4,300/pc</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-badge"><i class="fa-solid fa-clock"></i> Rates Updated Today 9:00 AM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-icon"><i class="fa-solid fa-recycle"></i></div>
+        <div>REUZE<span class="highlight">.IN</span><span class="dot">●</span></div>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item active"><a href="prices.html" class="nav-link">Live Scrap Rates</a></div>
+        <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+        <div class="nav-item"><a href="dashboard.html" class="nav-link">Track Pickup</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="pickup.html" class="btn btn-primary" id="prices-btn-book">
+          <i class="fa-regular fa-calendar-check"></i> Book Pickup at These Rates
+        </a>
+        <button class="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="logo-brand" style="font-size: 1.35rem;">
+          <div class="logo-icon" style="width: 34px; height: 34px; font-size: 1rem;"><i class="fa-solid fa-recycle"></i></div>
+          <span>REUZE.IN</span>
+        </div>
+        <button class="drawer-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="prices.html" class="mobile-nav-link active">Live Scrap Rates</a>
+        <a href="pickup.html" class="mobile-nav-link">Book Free Pickup</a>
+        <a href="dashboard.html" class="mobile-nav-link">Track Pickup</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Price Directory Hero Header -->
+  <section class="section-subtle" style="padding: 50px 0 30px 0; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <div class="section-tag"><i class="fa-solid fa-scale-balanced"></i> Calibrated Pricing</div>
+          <h1 style="font-size: 2.4rem; font-weight: 800; margin-bottom: 8px;">Complete Scrap & E-Waste Price Directory</h1>
+          <p style="color: var(--text-muted); font-size: 1rem; max-width: 600px;">
+            Fair, transparent, and non-negotiated market rates. What you see is what you get paid on your doorstep weighing scale.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="btn btn-outline" id="btn-print-rates">
+            <i class="fa-solid fa-print"></i> Print / PDF Price List
+          </button>
+          <a href="pickup.html" class="btn btn-primary">
+            <i class="fa-regular fa-calendar-check"></i> Schedule Free Pickup
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prices Grid & Filter Area -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Category Tabs -->
+      <div class="category-filter-tabs">
+        <button class="filter-tab-btn active" data-category="all">
+          <i class="fa-solid fa-layer-group"></i> All Items (32)
+        </button>
+        <button class="filter-tab-btn" data-category="metal">
+          <i class="fa-solid fa-cubes-stacked"></i> Metal Scrap
+        </button>
+        <button class="filter-tab-btn" data-category="ewaste">
+          <i class="fa-solid fa-microchip"></i> E-Waste & Electronics
+        </button>
+        <button class="filter-tab-btn" data-category="appliances">
+          <i class="fa-solid fa-snowflake"></i> Home Appliances
+        </button>
+        <button class="filter-tab-btn" data-category="vehicles">
+          <i class="fa-solid fa-car"></i> Vehicle Scrapping
+        </button>
+        <button class="filter-tab-btn" data-category="paper-plastic">
+          <i class="fa-solid fa-boxes-packing"></i> Paper & Plastics
+        </button>
+      </div>
+
+      <!-- Real-time Live Search Input -->
+      <div class="price-search-bar" style="margin-bottom: 40px;">
+        <i class="fa-solid fa-magnifying-glass price-search-icon"></i>
+        <input type="text" class="price-search-input" placeholder="Type item name (e.g. Copper, Battery, AC, Laptop, Iron)..." aria-label="Search Scrap Items">
+      </div>
+
+      <!-- Cards Container -->
+      <div class="scrap-cards-grid" id="scrap-cards-container">
+        <!-- Rendered dynamically by js/prices.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scrap Valuation Guidelines & Transparency Box -->
+  <section class="section section-subtle">
+    <div class="container" style="max-width: 920px;">
+      <div class="section-header">
+        <h2 class="section-title">How Scrap Value is Determined</h2>
+        <p class="section-desc">We follow international recycling purity standards for fair pricing.</p>
+      </div>
+
+      <div class="prices-guidelines-grid">
+        <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 8px;">
+            <i class="fa-solid fa-bolt"></i> Copper & Metal Grades
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+            Heavy unburned copper armature earns top rate (₹740/kg). Insulated wiring is graded based on copper recovery percentage after mechanical stripping.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <div style="font-weight: 700; font-size: 1.1rem; color: var(--accent-cyan); margin-bottom: 8px;">
+            <i class="fa-solid fa-snowflake"></i> Air Conditioners & Compressors
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+            Copper condenser Split ACs carry maximum resale value. Aluminium condenser units are evaluated based on net aluminum/iron gross weight.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Reuze.in. ISO 14001:2015 Certified Metal & E-Waste Scrap Directory.</div>
+        <a href="pickup.html" class="btn btn-primary btn-sm">Schedule Free Doorstep Pickup</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp & Back to top -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919811234567?text=Hi%20Reuze,%20I%20have%20a%20query%20about%20today%27s%20scrap%20rates" target="_blank" class="btn-floating-whatsapp" aria-label="WhatsApp Rate Inquiry">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="btn-back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <!-- Mobile Bottom Action Bar -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="mobile-bar-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="prices.html" class="mobile-bar-item active">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>Rates</span>
+    </a>
+    <a href="pickup.html" class="mobile-bar-item raised-btn">
+      <div class="raised-circle">
+        <i class="fa-solid fa-calendar-plus"></i>
+      </div>
+      <span>Book</span>
+    </a>
+    <a href="dashboard.html" class="mobile-bar-item">
+      <i class="fa-solid fa-truck-fast"></i>
+      <span>Track</span>
+    </a>
+    <a href="tel:180012373893" class="mobile-bar-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/prices.js"></script>
+</body>
+</html>
